@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="worker-test-suite.xml" />
+	<munit:test name="worker-test-suite-testTest" description="Test" doc:id="23762dde-6b19-47ed-9ca0-0342a0115462" >
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="628069b9-ecda-4fec-ae76-7f4af1c7fee7" cloneOriginalEvent="true"/>
+			<flow-ref doc:name="Flow-ref to test" doc:id="1cd5b6a2-fd8a-4f0d-baef-dc6668760d7e" name="test"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="cb80d2d2-28dc-4725-bcd5-a285c15d44f0" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
