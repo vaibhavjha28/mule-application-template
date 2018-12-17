@@ -8,7 +8,7 @@
 	<artifactId>mule-application-template-plan</artifactId>
     <version>1.0.0</version>
     
-    <packaging>mule-application</packaging>
+    <packaging>${packaging}</packaging>
 
 	<name>mule-application-template-plan</name>
 
