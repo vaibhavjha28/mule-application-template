@@ -17,7 +17,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<mule.tools.version>1.2</mule.tools.version>
 		<app.runtime>4.1.4</app.runtime>
-		<mule.maven.plugin.version>3.2.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.2.3-SNAPSHOT</mule.maven.plugin.version>
 		<!-- for munit  -->
 		<munit.version>2.1.4</munit.version>
 	</properties>
@@ -199,6 +199,15 @@
             <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
+        <repository>
+	   <id>mulesoft-snapshots</id>
+
+	   <name>MuleSoft Snapshots Repository</name>
+
+	   <url>https://repository.mulesoft.org/snapshots/</url>
+	   <layout>default</layout>
+
+	</repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -210,6 +219,17 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+	<pluginRepository>
+
+		<id>mulesoft-snapshots</id>
+
+		<name>mulesoft snapshot repository</name>
+
+		<layout>default</layout>
+
+		<url>https://repository.mulesoft.org/snapshots/</url>
+
+	</pluginRepository>
     </pluginRepositories>
 	<distributionManagement> 
     	<repository>
